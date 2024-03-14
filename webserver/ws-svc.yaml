@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: empms-ws-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: empms-ws
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
