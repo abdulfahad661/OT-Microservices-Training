@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: empms-ws
+  name: empms-ws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: empms-ws
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: empms-ws
+    spec:
+      containers:
+      - image: opstree/empms-webserver:1.0
+        imagePullPolicy: Always
+        name: empms-ws
+        ports:
+        - containerPort: 80
+        resources: {}
+        env:
+          - name: DEPLOY_TIME
+            value: 22:10
