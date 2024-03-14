@@ -18,7 +18,7 @@ spec:
         app: empms-attendance
     spec:
       containers:
-      - image: registry.digitalocean.com/empmsfa/empms-attendance:latest
+      - image: registry.digitalocean.com/empmsfa/empms-attendance:v1
         imagePullPolicy: Always
         name: empms-attendance
         ports:
