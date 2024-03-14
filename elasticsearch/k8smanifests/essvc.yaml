@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: empms-es-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: empms-es
+  ports:
+  - protocol: TCP
+    port: 9200
