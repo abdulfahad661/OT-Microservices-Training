@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +18,7 @@ spec:
         app: empms-frontend
     spec:
       containers:
-      - image: 702037529261.dkr.ecr.us-west-2.amazonaws.com/frontend-microservice
+      - image: opstree/empms-frontend:1.0
         imagePullPolicy: Always
         name: empms-frontend
         ports:
@@ -28,15 +27,3 @@ spec:
         env:
           - name: DEPLOY_TIME
             value: 22:10
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: empms-frontend
-spec:
-  type: ClusterIP
-  selector:
-    app: empms-frontend
-  ports:
-  - protocol: TCP
-    port: 5000
