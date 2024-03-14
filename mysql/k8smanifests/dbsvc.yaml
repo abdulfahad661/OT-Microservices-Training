@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: empms-db-svc
+  name: empms-db
 spec:
   type: ClusterIP
   selector:
