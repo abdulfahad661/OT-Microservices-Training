@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: empms-salary
+spec:
+  type: ClusterIP
+  selector:
+    app: empms-salary
+  ports:
+  - protocol: TCP
+    port: 8082
